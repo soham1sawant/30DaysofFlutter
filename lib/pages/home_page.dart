@@ -7,7 +7,6 @@ import 'package:velocity_x/velocity_x.dart';
 import 'package:welcome_app/utils/routes.dart';
 import 'package:welcome_app/widgets/home_widgets/catalog_header.dart';
 import 'package:welcome_app/widgets/home_widgets/catalog_list.dart';
-import 'package:welcome_app/widgets/themes.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,7 +20,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     loadData();
   }
@@ -41,11 +39,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: Theme.of(context).canvasColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-        backgroundColor: MyTheme.darkBluishColor,
-        child: Icon(CupertinoIcons.cart),
+        backgroundColor: Theme.of(context).buttonColor,
+        child: Icon(
+          CupertinoIcons.cart,
+          color: Colors.white,
+        ),
       ),
       body: SafeArea(
         child: Container(
