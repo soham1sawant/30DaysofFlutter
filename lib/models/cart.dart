@@ -1,10 +1,6 @@
 import 'package:welcome_app/models/catalog.dart';
 
 class CartModel {
-  static final cartModel = CartModel.internal();
-  CartModel.internal();
-
-  factory CartModel() => cartModel;
   // catalog field
   CatalogModel _catalog;
 

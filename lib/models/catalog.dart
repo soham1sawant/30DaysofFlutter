@@ -1,13 +1,7 @@
 import 'dart:convert';
 
-import 'package:welcome_app/models/cart.dart';
 
 class CatalogModel {
-  static final catModel = CatalogModel.internal();
-  CatalogModel.internal();
-
-  factory CatalogModel() => catModel;
-
   static List<Item> items;
 
   // Get Iten by ID
